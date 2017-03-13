@@ -1,0 +1,184 @@
+/*** sectioning elements ***/
+
+body {
+ background-color: #fff;
+ font-family: 'Open Sans Condensed', sans-serif;
+ font-size: 25px;
+}
+
+header {
+
+}
+
+main {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 25px;
+}
+
+footer {
+  background-color:#74C2CB;
+      width: inherit;
+      border: 25px solid #d6e5ff;
+      padding: 25px;
+      margin: 25px;
+
+}
+
+nav {
+
+}
+
+section {
+
+}
+
+aside {
+
+}
+
+
+/**** content styles ***/
+
+h1 {
+
+}
+
+h2 {
+font-family: 'Fredericka the Great', cursive;
+font-size: 75px;
+line-height: 1.0;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {
+
+}
+
+blockquote {
+
+}
+
+ol {
+
+}
+
+ul {
+
+}
+
+li {
+  text-align: left;
+  text-decoration: none;
+}
+
+table {
+
+}
+
+tr {
+
+}
+
+th {
+
+}
+
+td {
+
+}
+
+
+/*** image styles ***/
+
+img  {
+
+}
+
+.sources img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+
+.logo img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+/*** link styles ***/
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+    text-decoration: none;
+}
+
+a:hover {
+  color:black;
+  text-decoration: underline;
+}
+
+a:active {
+
+}
+
+/*=========
+Odin component overrides
+========
+/* navbar*/
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-brand{
+  color: inherit;
+  font-family: , cursive;
+  font-style: bold;
+}
+
+.navbar-brand a:hover,
+.navbar-brand a:active {
+  border-bottom: 3px solid #f48c42;
+  text-decoration: none;
+}
+
+/* photo-gallery*/
+.photo-gallery a {
+  text-decoration: none;
+
+.photo-gallery img{
+  border: 1px solid #bbb;
+  padding: 4px
+
+.photo-gallery img:hover {
+  box-shadow: 3px 3px 3px#888;
+}
+
+/* floating images*/
+
+img {
+  max-width: 100% none;
+}
+img.left {
+ float: left;
+ margin-right: 20px;
+ margin-bottom: 20px;
+ }
