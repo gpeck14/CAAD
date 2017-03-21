@@ -1,28 +1,23 @@
 /*** sectioning elements ***/
 
 body {
- background-color: #fff;
- font-family: 'Open Sans Condensed', sans-serif;
- font-size: 25px;
+  background-color: white;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 25px;
+
 }
 
-header {
 
+header {
+  background-color: white;
 }
 
 main {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 25px;
-}
-
-footer {
-  background-color:#74C2CB;
-      width: inherit;
-      border: 25px solid #d6e5ff;
-      padding: 25px;
-      margin: 25px;
 
 }
+
+
 
 nav {
 
@@ -40,26 +35,42 @@ aside {
 /**** content styles ***/
 
 h1 {
+ font-family: 'Poiret One', cursive;
+font-size: 50px;
 
 }
 
 h2 {
-font-family: 'Fredericka the Great', cursive;
-font-size: 75px;
-line-height: 1.0;
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: 500;
+
 }
 
 h3 {
-
+  font-size: 75px;
+  font-family: 'Fredericka the Great', cursive;
+  text-align:  center;
+   line-height: 1.0;
 }
 
 h4 {
-
+ font-family: 'Poiret One', cursive;
+ font-size: 35px;
+ text-align: center;
+ font-weight:  bold;
 }
 
 h5 {
+  text-align: center;
+  font-size: 65px;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: auto;
 
 }
+
+
 
 h6 {
 
@@ -77,30 +88,99 @@ ol {
 
 }
 
+
+
 ul {
+ }
+
+li {
+text-align: left;
+text-decoration: none;
+font-size: 25px;
 
 }
 
-li {
-  text-align: left;
-  text-decoration: none;
+footer {
+    background-color:#74C2CB;
+    width: inherit;
+    border: 25px solid #d6e5ff;
+    padding: 25px;
+    margin: 25px;
 }
 
 table {
-
+  border-collapse: collapse;
+  width:100%;
 }
 
-tr {
+tr:nth-child(odd) {
+  background-color:#ffffff;
 
-}
+  }
+
+tr:nth-child(even) {
+    background-color:#e5efff;
+  }
 
 th {
+  background-color: inherit;
+  padding: 7px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
 
 }
 
 td {
-
+  padding: 7px;
+  font-size: 24px;
+  text-align: center;
 }
+
+ tr:hover {background-color: #ccdfff}
+
+ @media
+ only screen and (max-width: 760px),
+ (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+
+ 	table, thead, tbody, th, td, tr {
+ 		display: block;
+ 	}
+
+
+ 	thead tr {
+ 		position: absolute;
+ 		top: -9999px;
+ 		left: -9999px;
+ 	}
+
+ 	tr { border: 1px solid #ccc; }
+
+ 	td {
+
+ 		border: none;
+ 		border-bottom: 1px solid #eee;
+ 		position: relative;
+ 		padding-left: 50%;
+ 	}
+
+ 	td:before {
+ 		position: absolute;
+ 		top: 6px;
+ 		left: 6px;
+ 		width: 45%;
+ 		padding-right: 10px;
+ 		white-space: nowrap;
+ 	}
+
+
+ 	td:nth-of-type(1):before { content: "Name"; }
+ 	td:nth-of-type(2):before { content: "Department"; }
+ 	td:nth-of-type(3):before { content: "Email"; }
+ 	td:nth-of-type(4):before { content: "Phone"; }
+ 	td:nth-of-type(5):before { content: "Website"; }
+
+ }
 
 
 /*** image styles ***/
@@ -111,76 +191,99 @@ img  {
 
 .sources img:hover {
     opacity: 0.5;
-    filter: alpha(opacity=50);
+    filter: alpha(opacity=50); /* For IE8 and earlier */
 }
-
 
 .logo img:hover {
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
-/*** link styles ***/
+
+
+.container {
+    position: inherit;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: white;
+  color:  black;
+  font-size: 25px;
+  padding: 5px 10px;
+  font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
 
 a:link {
-  color: black;
-  text-decoration: none;
+color: black;
+text-decoration: none;
 }
 
 a:visited {
   color: black;
-    text-decoration: none;
+  text-decoration: none;
+
 }
 
 a:hover {
-  color:black;
-  text-decoration: underline;
+border-bottom: 3px solid black;
+
 }
 
 a:active {
-
+  color:grey ;
+text-decoration: none;
 }
 
-/*=========
-Odin component overrides
-========
-/* navbar*/
-.navbar {
-  background-color: transparent;
-}
 
-.navbar-brand{
+/*---------------
+ Odin override
+ ----------*/
+
+ .navbar {
+   background-color: transparent;
+ }
+
+.navbar-brand {
   color: inherit;
-  font-family: , cursive;
-  font-style: bold;
+font-family: 'Poiret One', cursive;
+font-style: bold;
 }
 
-.navbar-brand a:hover,
-.navbar-brand a:active {
+.navbar-menu a:hover,
+.navbar-menu a:active {
   border-bottom: 3px solid #f48c42;
   text-decoration: none;
 }
-
-/* photo-gallery*/
-.photo-gallery a {
-  text-decoration: none;
-
-.photo-gallery img{
-  border: 1px solid #bbb;
-  padding: 4px
-
-.photo-gallery img:hover {
-  box-shadow: 3px 3px 3px#888;
-}
-
-
-
-/* floating images*/
-
-img {
-  max-width: 100% none;
-}
-img.left {
- float: left;
- margin-right: 20px;
- margin-bottom: 20px;
- }
